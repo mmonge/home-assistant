@@ -1,6 +1,6 @@
 blueprint:
-  name: MMonge Motion-activated Light
-  description: Turn on a light when motion is detected and turn off after wait time.
+  name: MMonge Occupancy-activated Light
+  description: Turn on a light when occupancy is detected and turn off after wait time.
   domain: automation
   author: Home Assistant + mmonge
   homeassistant:
@@ -12,7 +12,7 @@ blueprint:
         entity:
           filter:
             domain: binary_sensor
-            device_class: motion_*
+            device_class: occupancy
     light_target:
       name: Light
       selector:
